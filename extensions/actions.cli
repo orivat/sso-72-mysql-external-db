@@ -2,6 +2,6 @@
 embed-server --std-out=echo  --server-config=standalone-openshift.xml
 batch
 /subsystem=datasources/data-source=KeycloakDS:remove()
-/subsystem=datasources/data-source=KeycloakDS:add(jndi-name=java:jboss/datasources/KeycloakDS,enabled=true,use-java-context=true,connection-url="jdbc:mysql://10.74.213.189/keycloak",driver-name=mysql,user-name="root",password="!taKezo91")
+/subsystem=datasources/data-source=KeycloakDS:add(jndi-name=java:jboss/datasources/KeycloakDS,enabled=true,use-java-context=true,connection-url="jdbc:mysql://10.74.213.189/keycloak?useSSL=false",driver-name=mysql,user-name="root",password="!taKezo91")
 run-batch
 quit
